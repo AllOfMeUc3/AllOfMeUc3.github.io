@@ -58,11 +58,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-.spin {
-    animation: spin 2s infinite linear;
-    display: inline-block;
-}
-
 @keyframes spin {
     100% { transform: rotate(360deg); }
 }
