@@ -1,62 +1,27 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Interactive Site</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        .spin {
-            animation: spin 2s infinite linear;
-            display: inline-block;
-        }
-        @keyframes spin {
-            100% { transform: rotate(360deg); }
-        }
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            cursor: pointer;
-            margin: 5px;
-        }
-        input {
-            padding: 8px;
-            width: 200px;
-        }
-        #posts {
-            margin-top: 20px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AllOfMeUc3 - Home</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1 class="spin">Welcome to My Fun Site!</h1>
-    <p id="message">Click below to interact!</p>
-    <button onclick="changeMessage()">Surprise Me!</button>
-
-    <h2>My Blog</h2>
-    <input id="newPost" placeholder="Type a blog post">
-    <button onclick="addPost()">Add Post</button>
-    <div id="posts">
-        <p>Post #1: HTML, CSS, and JS rock!</p>
-    </div>
-
-    <script>
-        function changeMessage() {
-            let message = document.getElementById("message");
-            message.innerText = "You’re a web wizard now!";
-            message.style.color = "green";
-        }
-
-        function addPost() {
-            let input = document.getElementById("newPost").value;
-            if (input) {
-                let posts = document.getElementById("posts");
-                posts.innerHTML += `<p>${input}</p>`;
-                document.getElementById("newPost").value = ""; // Clear input
-            }
-        }
-    </script>
+    <nav>
+        <div class="nav-title">AllOfMeUc3</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="learn.html">Learn</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1 class="spin">Welcome to My Sleek Site!</h1>
+        <p>This is my space for fun, creativity, and robotics dreams.</p>
+        <button onclick="surprise()">Surprise!</button>
+        <p id="message"></p>
+    </main>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
